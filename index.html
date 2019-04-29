@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=BioRhyme:800"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="elements.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <title>Mondego IT GmbH</title>
+  </head>
+  <body class="grid">
+    <div class="header">
+      <nav>
+        <div class="button menu-button"><i class="fas fa-bars"></i></div>
+        <div class="menu">
+          <div class="skew">
+            <a href="about">Über uns</a>
+          </div>
+          <div class="skew">
+            <a href="about">Kunden & Projekte</a>
+          </div>
+          <div class="skew">
+            <a href="about">Über uns</a>
+          </div>
+          <div class="skew">
+            <a href="about">Kontakt</a>
+          </div>
+        </div>
+        <div class="mondego-logo">
+          <h1>MONDEGO IT</h1>
+        </div>
+      </nav>
+      <div class="background">
+        <div class="top-wedge relative"></div>
+        <div id="middle-wedge" class="middle-wedge relative"></div>
+        <div id="bottom-wedge" class="bottom-wedge relative flex">
+          <div class="slogan">Ihre <strong>IBM</strong> i Experten!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column">
+          <div class="sample-content">
+            <blockquote cite="https://www.huxley.net/bnw/four.html">
+              "Words can be like X-rays, if you use them properly – they'll go
+              through anything. You read and you're pierced."
+            </blockquote>
+
+            <cite>– Aldous Huxley, Brave New World</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-column">
+      <div class="columns">
+        <div class="column">Single Column</div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="article">
+            <div class="article-image"></div>
+            <div class="article-separator"></div>
+            <div class="article-content">
+              <h2 class="article-title">
+                Some Title
+              </h2>
+              <span class="article-meta">02.05.2019 - Paulo Costa</span>
+              <p class="article-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatem consectetur cumque odio, sint voluptate neque at
+                aspernatur dolores, quam alias nisi amet dicta nostrum
+                exercitationem. Dolores atque explicabo voluptatum reiciendis.
+              </p>
+              <a href="index.html" class="article-link">Read more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="sample-content">
+            Column
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Mondego IT by Kerim Güney
+        </p>
+      </div>
+    </footer>
+    <script>
+      (function() {
+        setTimeout(() => {
+          let bottomWedge = document.getElementById("bottom-wedge");
+          let middleWedge = document.getElementById("middle-wedge");
+          bottomWedge.style.height = "200%";
+          middleWedge.style.height = "20%";
+        }, 0);
+      })();
+    </script>
+  </body>
+</html>
