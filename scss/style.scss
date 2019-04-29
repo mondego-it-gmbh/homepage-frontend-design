@@ -1,20 +1,10 @@
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+@import "minireset";
+@import "colors";
+@import "navigation";
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #e8f1f2;
+  background-color: $color-fourth;
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -25,53 +15,6 @@ body {
 
 .relative {
   position: relative;
-}
-
-nav {
-  position: absolute;
-  top: 20px;
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-nav .menu {
-  display: none;
-}
-
-nav .skew {
-  display: inline-block;
-  transform: skew(-15deg);
-  border: 1px solid #13293d;
-  margin-right: 1rem;
-}
-
-nav .menu-button {
-  margin-left: 1rem;
-  font-size: 1.1rem;
-  background-color: #e8f1f2;
-}
-
-nav .skew:hover {
-  border: 1px solid #e8f1f2;
-  transition: all 300ms;
-}
-
-nav a {
-  display: inline-block;
-  color: #e8f1f2;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.5rem;
-  transform: skew(15deg);
-  transition: color 300ms;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-nav a:hover {
-  color: #e8f1f2;
 }
 
 .header {
@@ -85,7 +28,7 @@ nav a:hover {
 
 .top-wedge {
   height: 50%;
-  background: #13293d;
+  background: $color-first;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transform: skewY(4deg);
   transform-origin: top right;
@@ -93,7 +36,7 @@ nav a:hover {
 }
 .middle-wedge {
   height: 0%;
-  background: rgb(194, 223, 240);
+  background: $color-second;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 10;
   transform: skewY(4deg);
@@ -106,7 +49,7 @@ nav a:hover {
   z-index: 5;
   height: 0;
   width: 100%;
-  background: #006494;
+  background: $color-third;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: height 1s ease;
   display: flex;
@@ -126,7 +69,7 @@ nav a:hover {
 
 .mondego-logo {
   display: inline-block;
-  background-color: #e8f1f2;
+  background-color: $color-fourth;
   transform: skew(-15deg);
   margin-right: 2rem;
   white-space: nowrap;
@@ -141,14 +84,14 @@ nav a:hover {
 }
 
 .footer {
-  background-color: #006494;
-  color: #e8f1f2;
+  background-color: $color-third;
+  color: $color-fourth;
   display: flex;
   justify-content: center;
 }
 
 strong {
-  color: #e8f1f2;
+  color: $color-fourth;
 }
 
 .section {
@@ -157,14 +100,15 @@ strong {
   min-height: 50vh;
   display: flex;
   justify-content: center;
-}
 
-.section .columns {
-  margin: 5rem 0;
-}
-.section .column {
-  border: none;
-  box-shadow: none;
+  .columns {
+    margin: 5rem 0;
+
+    .column {
+      border: none;
+      box-shadow: none;
+    }
+  }
 }
 
 @media only screen and (min-width: 480px) {

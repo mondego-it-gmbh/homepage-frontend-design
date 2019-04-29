@@ -1,0 +1,46 @@
+nav {
+  position: absolute;
+  top: 20px;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .menu {
+    display: none;
+  }
+
+  .skew {
+    display: inline-block;
+    transform: skew(-15deg);
+    border: 1px solid $color-first;
+    margin-right: 1rem;
+  }
+
+  .menu-button {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    background-color: $color-fourth;
+  }
+
+  .skew:hover {
+    border: 1px solid $color-fourth;
+    transition: all 300ms;
+  }
+
+  a {
+    display: inline-block;
+    color: $color-fourth;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    transform: skew(15deg);
+    transition: color 300ms;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &:hover {
+      color: $color-fourth;
+    }
+  }
+}
