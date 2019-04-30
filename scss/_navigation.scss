@@ -44,10 +44,17 @@ nav {
     }
   }
 }
+@media only screen and (max-width: 1023px) {
+  nav {
+    position: fixed;
+    background-color: $color-first;
+    padding: 0.5rem 0;
+    top: 0;
 
-@media only screen and (min-width: 480px) {
-  .menu {
-    display: block;
+    .mondego-logo > h1 {
+      padding: 0.25rem;
+      font-size: 1rem;
+    }
   }
 }
 
