@@ -1,29 +1,5 @@
 @import "colors";
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.columns {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  padding: 0 0.5rem;
-
-  .column {
-    background-color: #ffffff;
-    border: 1px solid #bcc8d4;
-    flex-shrink: 0;
-    flex-basis: 100%;
-    margin-bottom: 0.5rem;
-    min-height: 300px;
-    border-radius: 2px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-}
-
 .article {
   width: 100%;
   display: flex;
@@ -37,7 +13,7 @@
 
   &-separator {
     height: 50px;
-    background: #006494;
+    background: $color-third;
     transform: skewY(3deg);
     transform-origin: bottom right;
   }
@@ -48,26 +24,5 @@
 
   &-title {
     margin-top: 0;
-  }
-}
-
-@media only screen and (min-width: 480px) {
-}
-
-@media only screen and (min-width: 1024px) {
-  .columns {
-    max-width: 1280px;
-    .column {
-      flex-grow: 1;
-      flex-basis: 0;
-      margin: 0.5rem;
-    }
-
-    .column:first-child {
-      margin-left: 0;
-    }
-    .column:last-child {
-      margin-right: 0;
-    }
   }
 }

@@ -1,70 +1,72 @@
 @import "minireset";
 @import "colors";
+@import "fonts";
+@import "layout";
+@import "mods";
 @import "navigation";
+@import "elements";
 
 html,
 body {
   background-color: $color-fourth;
-  font-family: "IBM Plex Sans", sans-serif;
-}
-
-.grid {
-  display: grid;
-  grid-template-rows: min-content;
-}
-
-.relative {
-  position: relative;
+  font-family: $font-primary;
 }
 
 .header {
   min-height: 400px;
   height: 50vh;
-}
 
-.header > .background {
-  height: 75%;
-}
+  .background {
+    height: 75%;
+  }
 
-.top-wedge {
-  height: 50%;
-  background: $color-first;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: skewY(4deg);
-  transform-origin: top right;
-  z-index: 15;
-}
-.middle-wedge {
-  height: 0%;
-  background: $color-second;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 10;
-  transform: skewY(4deg);
-  transform-origin: top right;
-  transition: height 1s ease;
-}
+  .top-wedge,
+  .middle-wedge,
+  .bottom-wedge {
+    position: relative;
+  }
 
-.bottom-wedge {
-  margin-top: -50vh;
-  z-index: 5;
-  height: 0;
-  width: 100%;
-  background: $color-third;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: height 1s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-size: cover;
-}
+  .top-wedge,
+  .middle-wedge {
+    transform: skewY(4deg);
+    transform-origin: top right;
+  }
 
-.bottom-wedge > .slogan {
-  position: absolute;
-  bottom: 75px;
-  font-weight: 300;
-  font-size: 1.5rem;
-  white-space: nowrap;
+  .middle-wedge,
+  .bottom-wedge {
+    transition: height 1s ease;
+  }
+
+  .top-wedge {
+    background: $color-first;
+    height: 50%;
+    z-index: 15;
+  }
+  .middle-wedge {
+    background: $color-second;
+    height: 0;
+    z-index: 10;
+  }
+
+  .bottom-wedge {
+    background: $color-third;
+    margin-top: -50vh;
+    z-index: 5;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-size: cover;
+  }
+
+  .bottom-wedge > .slogan {
+    position: absolute;
+    bottom: 75px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
 }
 
 .mondego-logo {
@@ -83,34 +85,6 @@ body {
   font-family: "BioRhyme", "Helvetica", "Arial", sans-serif;
 }
 
-.footer {
-  background-color: $color-third;
-  color: $color-fourth;
-  display: flex;
-  justify-content: center;
-}
-
-strong {
-  color: $color-fourth;
-}
-
-.section {
-  background-color: white;
-  margin-bottom: 1rem;
-  min-height: 50vh;
-  display: flex;
-  justify-content: center;
-
-  .columns {
-    margin: 5rem 0;
-
-    .column {
-      border: none;
-      box-shadow: none;
-    }
-  }
-}
-
 @media only screen and (min-width: 480px) {
   .bottom-wedge > .slogan {
     font-size: 3rem;
@@ -119,19 +93,3 @@ strong {
     display: block;
   }
 }
-
-@media only screen and (min-width: 1024px) {
-  nav .menu-button {
-    display: none;
-  }
-
-  nav {
-    justify-content: flex-end;
-  }
-
-  nav .menu {
-    display: inline;
-  }
-}
-
-@import "elements";
